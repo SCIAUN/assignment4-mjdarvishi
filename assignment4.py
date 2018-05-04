@@ -1,22 +1,22 @@
+import nmap
+
 def port_scanner():
-    """
-    write a port scanner using nmap library
-    for scanning 10 arbitrary hosts and and ports between
-    21-1000 then write the result to a file using
-    write_to_file function
-    """
-
+   p=nmap.PortScanner();
+   p.scan(ports,'21-1000');
+   for host_names in p.all_hosts():
+       ports=p[host_names].get('tcp');
+       write_to_file(ports);
+   return ports;
 def write_to_file(contents):
-    """
-    first remove the pass from function body
-    then write your code
-    :param contents: the result that should be written to file
-    :return: true if the writing successfull and false if can't
-    """
-    pass
-
+   m=open('write_to_file','My_File');
+   m.write(str(contents));
+ pass
 
 def main():
-    port_scanner()
+    sites[
+    'google.com','yahoo.com','salamdl.info'
+    ]
+    for s in sites:
+        port_scanner(s);
 
 main()
